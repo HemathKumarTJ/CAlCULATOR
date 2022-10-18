@@ -1,0 +1,191 @@
+﻿
+@{
+    Layout = null;
+}
+<style>
+    .seven {
+        padding: 12px 20px 12px 20px;
+    }
+    .eight {
+        padding: 12px 20px 12px 20px;
+    }
+    .nine {
+        padding: 12px 20px 12px 20px;
+    }
+    .divide {
+        padding: 12px 20px 12px 20px;
+    }
+    .input {
+        padding: 12px 26px 12px 25px;
+    }
+    .four {
+        padding: 12px 20px 12px 20px;
+    }
+    .five {
+        padding: 12px 20px 12px 20px;
+    }
+    .six {
+        padding: 12px 20px 12px 20px;
+    }
+    .multiply {
+        padding: 12px 19px 12px 20px;
+    }
+    .one {
+        padding: 12px 20px 12px 20px;
+    }
+
+    .two {
+        padding: 12px 20px 12px 20px;
+    }
+
+    .three {
+        padding: 12px 20px 12px 20px;
+    }
+
+    .minus {
+        padding: 12px 20px 12px 20px;
+    }
+    .zero {
+        padding: 12px 20px 12px 20px;
+    }
+
+    .dot {
+        
+        padding: 12px 23px 12px 20px;
+    }
+
+    .plus {
+        padding: 12px 20px 12px 20px;
+    }
+
+    .equal {
+        
+        padding: 12px 20px 12px 17px;
+    }
+    .ce {
+        padding: 12px 44px 12px 40px;
+    }
+    .clear {
+        padding: 12px 34px 12px 34px;
+    }
+    .table{
+        display:flex;
+        justify-content:center;     
+    }
+    .heading{
+        text-align:center;
+    }
+</style>
+
+
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Hemath</title>
+    <script>
+        function num(i) {
+            x = document.getElementById("a")
+            switch (i) {
+                case 7:
+                    x.value += 7;
+                    break;
+                case 8:
+                    x.value += 8;
+                    break;
+                case 9:
+                    x.value += 9;
+                    break;
+                case '/':
+                    x.value += '/';
+                    break;
+                case 4:
+                    x.value += 4;
+                    break;
+                case 5:
+                    x.value += 5;
+                    break;
+                case 6:
+                    x.value += 6;
+                    break;
+                case '*':
+                    x.value += '*';
+                    break;
+                case 1:
+                    x.value += 1;
+                    break;
+                case 2:
+                    x.value += 2;
+                    break;
+                case 3:
+                    x.value += 3;
+                    break;
+                case '-':
+                    x.value += '-';
+                    break;
+                case 0:
+                    x.value += 0;
+                    break;
+                case '.':
+                    x.value += '.';
+                    break;
+                case '+':
+                    x.value += '+';
+                    break;
+                case '=':
+                    result = eval(x.value);
+                    x.value = result;
+                    break;
+                case 'Clear':
+                    x.value = "";
+                    break;
+                case "ce":
+                    x.value = x.value.slice(0, -1);
+                    break;
+            }
+        }
+    </script>
+   
+</head>
+<body>
+    
+        <h1 class="heading">My Calculator</h1>
+        <table class="table">
+            <tr><td colspan="4"> <input  class="input" type="text" id="a"></td></tr>
+            <tr>
+                <td><button  class="seven" onclick="num(7)">7</button></td>
+                <td><button  class="eight" onclick="num(8)">8</button></td>
+                <td><button class="nine" onclick="num(9)">9</button></td>
+                <td><button  class="divide" onclick="num('/')">/</button></td>
+            </tr>
+            <tr>
+                <td><button class="four" onclick="num(4)">4</button></td>
+                <td><button  class="five" onclick="num(5)">5</button></td>
+                <td><button class="six" onclick="num(6)">6</button></td>
+                <td><button class="multiply" onclick="num('*')">*</button></td>
+            </tr>
+            <tr>
+                <td><button class="one" onclick="num(1)">1</button></td>
+                <td><button   class="two" onclick="num(2)">2</button></td>
+                <td><button class="three" onclick="num(3)">3</button></td>
+                <td><button   class="minus" onclick="num('-')">-</button></td>
+            </tr>
+            <tr>
+                <td  ><button class="zero" onclick="num(0)">0</button></td>
+                <td ><button  class="dot" onclick="num('.')">.</button></td>
+                <td ><button class="plus"  onclick="num('+')">+</button></td>
+                <td ><button class="equal" onclick="num('=')">=</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button class="ce" onclick="num('ce')" >CE</button></td>
+                <td colspan="2"><button class="clear" onclick="num('Clear')">Clear</button></td>           
+            </tr>
+
+        </table>
+        
+    
+</body>
+</html>
